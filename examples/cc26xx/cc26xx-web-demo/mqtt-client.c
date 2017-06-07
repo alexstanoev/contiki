@@ -183,7 +183,7 @@ org_id_post_handler(char *key, int key_len, char *val, int val_len)
     return HTTPD_SIMPLE_POST_HANDLER_UNKNOWN;
   }
 
-  if(val_len > MQTT_CLIENT_CONFIG_ORG_ID_LEN) {
+  if(val_len >= MQTT_CLIENT_CONFIG_ORG_ID_LEN) {
     /* Ours but bad value */
     rv = HTTPD_SIMPLE_POST_HANDLER_ERROR;
   } else {
@@ -208,7 +208,7 @@ type_id_post_handler(char *key, int key_len, char *val, int val_len)
     return HTTPD_SIMPLE_POST_HANDLER_UNKNOWN;
   }
 
-  if(val_len > MQTT_CLIENT_CONFIG_TYPE_ID_LEN) {
+  if(val_len >= MQTT_CLIENT_CONFIG_TYPE_ID_LEN) {
     /* Ours but bad value */
     rv = HTTPD_SIMPLE_POST_HANDLER_ERROR;
   } else {
@@ -233,7 +233,7 @@ event_type_id_post_handler(char *key, int key_len, char *val, int val_len)
     return HTTPD_SIMPLE_POST_HANDLER_UNKNOWN;
   }
 
-  if(val_len > MQTT_CLIENT_CONFIG_EVENT_TYPE_ID_LEN) {
+  if(val_len >= MQTT_CLIENT_CONFIG_EVENT_TYPE_ID_LEN) {
     /* Ours but bad value */
     rv = HTTPD_SIMPLE_POST_HANDLER_ERROR;
   } else {
@@ -258,7 +258,7 @@ cmd_type_post_handler(char *key, int key_len, char *val, int val_len)
     return HTTPD_SIMPLE_POST_HANDLER_UNKNOWN;
   }
 
-  if(val_len > MQTT_CLIENT_CONFIG_CMD_TYPE_LEN) {
+  if(val_len >= MQTT_CLIENT_CONFIG_CMD_TYPE_LEN) {
     /* Ours but bad value */
     rv = HTTPD_SIMPLE_POST_HANDLER_ERROR;
   } else {
@@ -283,7 +283,7 @@ auth_token_post_handler(char *key, int key_len, char *val, int val_len)
     return HTTPD_SIMPLE_POST_HANDLER_UNKNOWN;
   }
 
-  if(val_len > MQTT_CLIENT_CONFIG_AUTH_TOKEN_LEN) {
+  if(val_len >= MQTT_CLIENT_CONFIG_AUTH_TOKEN_LEN) {
     /* Ours but bad value */
     rv = HTTPD_SIMPLE_POST_HANDLER_ERROR;
   } else {
@@ -356,7 +356,7 @@ ip_addr_post_handler(char *key, int key_len, char *val, int val_len)
     return HTTPD_SIMPLE_POST_HANDLER_UNKNOWN;
   }
 
-  if(val_len > MQTT_CLIENT_CONFIG_IP_ADDR_STR_LEN) {
+  if(val_len >= MQTT_CLIENT_CONFIG_IP_ADDR_STR_LEN) {
     /* Ours but bad value */
     rv = HTTPD_SIMPLE_POST_HANDLER_ERROR;
   } else {
